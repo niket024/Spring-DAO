@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Convert local variable &apos;com.nik.MainApp.main().context&apos; in &apos;com.nik.MainApp.main()&apos; to field&#x0D;&#x0A;- Original project: &apos;Spring-JDBC&apos;&#x0D;&#x0A;- Original element: &apos;com.nik.MainApp.main().context&apos;&#x0D;&#x0A;- Field name: &apos;context&apos;&#x0D;&#x0A;- Initialize field in method&#x0D;&#x0A;- Declared visibility: &apos;private&apos;&#x0D;&#x0A;- Declare field &apos;static&apos;" description="Convert local variable &apos;context&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src\/main\/java&lt;com.nik{MainApp.java" name="context" selection="268 63" stamp="1545035471521" static="true" version="1.0" visibility="2"/>
+</session>

@@ -1,0 +1,34 @@
+Problem with plain JDBC
+-----------------------
+1. Writing unnecessary code to handle exceptions.
+2. Opening and closing database connections, etc.
+
+Why Spring JDBC Framework?
+-------------------------
+Spring JDBC Framework takes care of all the low-level details starting from opening the connection, 
+prepare and execute the SQL statement, process exceptions, 
+handle transactions and finally close the connection. 
+Spring JDBC provides several approaches and correspondingly different classes to intract with the database.
+
+JdbcTemplate 
+------------
+This is the central framework class that manages all the database communication and exception handling.
+The JDBC Template class executes SQL queries, updates statements, stores procedure calls, 
+performs iteration over ResultSets, and extracts returned parameter values. 
+It also catches JDBC exceptions and translates them to the generic, more informative, 
+exception hierarchy defined in the org.springframework.dao package.
+
+Data Access Object (DAO)
+--------------------------
+DAO stands for Data Access Object, which is commonly used for database interaction. 
+DAOs exist to provide a means to read and write data to the database and they should expose this functionality 
+through an interface by which the rest of the application will access them.
+
+RowMapper
+--------------
+RowMapper interface fetch the records from the database using query() method of JdbcTemplate class.
+RowMapper interface allows to map a row of the relations with the instance of user-defined class. 
+It iterates the ResultSet internally and adds it into the collection. 
+So we don't need to write a lot of code to fetch the records as ResultSetExtractor.
+Implementations of this interface perform the actual work of mapping each row to a result object.
+RowMapper saves a lot of code becuase it internally adds the data of ResultSet into the collection.
