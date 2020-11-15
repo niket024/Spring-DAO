@@ -10,8 +10,7 @@
   http://www.springframework.org/schema/tx 
   http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-	<context:component-scan
-		base-package="com.nik.*" />
+	<context:component-scan base-package="com.nik.*" />
 	<!-- For reading properties files -->
 	<context:property-placeholder
 		location="classpath:db.properties" />
@@ -36,4 +35,11 @@
 	</bean>
 	<tx:annotation-driven proxy-target-class="true"
 		transaction-manager="txManager" />
+
+	<bean id="bookService" class="com.nik.service.BookServiceImpl"></bean>
+	<bean id="storyService" class="com.nik.service.StoryServiceImpl"></bean>
+
+	<bean id="bookRepository" class="com.nik.dao.BookRepository"></bean>
+	<bean id="storyRepository" class="com.nik.dao.StoryRepository"></bean>
+
 </beans>

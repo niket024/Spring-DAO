@@ -9,8 +9,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionDefinition;
 import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
-
 public class StudentJDBCTemplate implements StudentDAO {
 	private DataSource dataSource;
 	private JdbcTemplate jdbcTemplateObject;
@@ -29,7 +29,6 @@ public class StudentJDBCTemplate implements StudentDAO {
 	public void create(String name, Integer age, Integer marks, Integer year) {
 		TransactionDefinition def = new DefaultTransactionDefinition();
 		TransactionStatus status = transactionManager.getTransaction(def);
-
 		try {
 			String SQL1 = "insert into Student (name, age) values (?, ?)";
 			jdbcTemplateObject.update(SQL1, name, age);

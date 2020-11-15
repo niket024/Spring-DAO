@@ -12,3 +12,14 @@ CREATE TABLE `address` (
   KEY `id_idx` (`id`),
   CONSTRAINT `id` FOREIGN KEY (`id`) REFERENCES `employee` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 )
+
+CREATE TABLE `Book` (
+  `bookId` varchar(11),
+  `bookName` varchar(35) DEFAULT NULL,
+  `price` int(11)
+) 
+
+CREATE TABLE `Story` (
+  `storyId` int(11),
+  `storyName` varchar(35),
+) 

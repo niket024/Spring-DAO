@@ -32,7 +32,7 @@ public class MainApp {
 		studentJDBCTemplate.update(55, 20);
 
 		System.out.println("----Listing Record with ID = 2 -----");
-		Student student = studentJDBCTemplate.getStudent(64);
+		Student student = studentJDBCTemplate.getStudent(2);
 		System.out.print("ID : " + student.getId());
 		System.out.print(", Name : " + student.getName());
 		System.out.println(", Age : " + student.getAge());

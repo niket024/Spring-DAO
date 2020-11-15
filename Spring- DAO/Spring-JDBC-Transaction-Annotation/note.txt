@@ -1,0 +1,1 @@
+https://www.netsurfingzone.com/spring/transactional-required-vs-requires_new-example-in-spring-boot/
