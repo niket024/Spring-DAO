@@ -45,5 +45,6 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		jdbcTemplate.update(INSERT_ADDR_QUERY, emp.getEmpId(), emp.getAddress().getAddrLine(),
 				emp.getAddress().getCity());
 		System.out.println("Employee address record inserted");
+		throw new ArithmeticException();
 	}
 }

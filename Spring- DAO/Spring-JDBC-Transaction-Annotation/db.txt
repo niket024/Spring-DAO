@@ -21,5 +21,10 @@ CREATE TABLE `Book` (
 
 CREATE TABLE `Story` (
   `storyId` int(11),
-  `storyName` varchar(35),
+  `storyName` varchar(35)
+) 
+
+CREATE TABLE `Author` (
+  `authorId` int(11),
+  `authorName` varchar(35)
 ) 

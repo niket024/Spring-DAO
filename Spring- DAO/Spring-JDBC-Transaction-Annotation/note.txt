@@ -1,1 +1,13 @@
 https://www.netsurfingzone.com/spring/transactional-required-vs-requires_new-example-in-spring-boot/
+
+Spring disable transactions for a single class method
+-----------------------------------------------------
+@Transactional(propagation=Propagation.NEVER)
+public long notInTransaction(AnythingData anythingData) throws Exception {
+   //JDBC code...
+}
+
+Will throw an exception if this method is called inside an active transaction. 
+Whereas Propagation.NOT_SUPPORTED will "suspend" 
+the current transaction and make sure that the method is called non transactional.
+ref: http://redino.net/blog/2018/08/spring-disable-transaction-for-method-in-transactional-class/

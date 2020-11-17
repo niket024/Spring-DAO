@@ -19,7 +19,7 @@ public class App {
 	private static Employee createEmployee() {
 		Employee emp = new Employee();
 		Address addr = new Address();
-		emp.setEmpId(102);
+		emp.setEmpId(106);
 		emp.setEmpName("John");
 		emp.setAge(25);
 		// same as employee ID

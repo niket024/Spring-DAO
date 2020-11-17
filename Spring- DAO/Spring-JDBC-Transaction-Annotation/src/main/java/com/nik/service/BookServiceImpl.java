@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.nik.dao.BookRepository;
 
 @Service
+@Transactional(isolation = Isolation.DEFAULT, propagation = Propagation.REQUIRED)
 public class BookServiceImpl implements BookService {
 
 	@Autowired
@@ -17,11 +18,15 @@ public class BookServiceImpl implements BookService {
 	@Autowired
 	private StoryService storyService;
 
-	@Transactional(isolation = Isolation.DEFAULT, propagation = Propagation.REQUIRED)
+	@Autowired
+	private AuthorService authorService;
+
 	public void save() {
 		bookRepository.save();
 		storyService.save();
-		throw new RuntimeException("this exception in throwing intentionally");
+		authorService.save();
+		//throw new RuntimeException("this exception in throwing intentionally");
 
 	}
+
 }

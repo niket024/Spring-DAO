@@ -38,8 +38,10 @@
 
 	<bean id="bookService" class="com.nik.service.BookServiceImpl"></bean>
 	<bean id="storyService" class="com.nik.service.StoryServiceImpl"></bean>
+	<bean id="authorService" class="com.nik.service.AuthorServiceImpl"></bean>
 
 	<bean id="bookRepository" class="com.nik.dao.BookRepository"></bean>
 	<bean id="storyRepository" class="com.nik.dao.StoryRepository"></bean>
+	<bean id="authorRepository" class="com.nik.dao.AuthorRepository"></bean>
 
 </beans>
